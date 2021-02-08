@@ -4,8 +4,8 @@
 		"dockerfile": "Dockerfile",
 		"context": "..",
         "args": {
-			"VARIANT": "3.9",
-		} 
+			"VARIANT": "3.8",
+		}
 	},
     "settings": {
         "terminal.integrated.shell.linux": "/bin/fish"

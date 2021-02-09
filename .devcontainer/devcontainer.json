@@ -4,7 +4,15 @@
 		"dockerfile": "Dockerfile",
 		"context": "..",
 	},
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/fish"
+	"remoteUser": "vscode",
+	"extensions": [
+		"ms-python.python",
+		"ms-toolsai.jupyter",
+		"ms-python.vscode-pylance",
+		"ms-azuretools.vscode-docker",
+	],
+	"settings": {
+        "terminal.integrated.shell.linux": "/usr/bin/fish",
     },
+	"postStartCommand": "python3 -m pre_commit install",
 }

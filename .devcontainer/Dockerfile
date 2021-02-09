@@ -1,5 +1,9 @@
-FROM mcr.microsoft.com/vscode/devcontainers/python:3.8
+FROM mcr.microsoft.com/vscode/devcontainers/python:3.9
 
-ADD requirements.txt /tmp/.
-RUN python3 -m pip insall pip setuptools --no-cache-dir --upgrade && \
-	python3 -m pip install -r /tmp/requirements.txt --no-cache-dir --upgrade
+RUN apt update && \
+	DEBIAN_FRONTEND=noninteractive apt upgrade -y && \
+	DEBIAN_FRONTEND=noninteractive apt install -y fish
+
+COPY requirements.txt /tmp/pip-tmp/
+RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt && \
+    rm -rf /tmp/pip-tmp

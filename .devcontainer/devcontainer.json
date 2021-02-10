@@ -10,7 +10,8 @@
     "ms-azuretools.vscode-docker"
   ],
   "name": "playground",
-  "postStartCommand": "python3 -m pre_commit install",
+  "postAttachCommand": "poetry run pre-commit install",
+  "postStartCommand": "poetry install",
   "remoteUser": "vscode",
   "settings": {
     "terminal.integrated.shell.linux": "/usr/bin/fish"

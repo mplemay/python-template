@@ -8,7 +8,6 @@ repos:
     args: [--autofix]
   - id: check-json
   - id: check-toml
-  - id: name-tests-test
   - id: end-of-file-fixer
   - id: check-yaml
   - id: check-added-large-files
@@ -18,7 +17,6 @@ repos:
   - id: check-docstring-first
   - id: check-merge-conflict
   - id: debug-statements
-  - id: double-quote-string-fixer
   - id: mixed-line-ending
   - id: requirements-txt-fixer
   - id: sort-simple-yaml
